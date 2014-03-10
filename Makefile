@@ -40,7 +40,7 @@ test: test.c $(STATIC_LIB)
 
 
 sht610.so: $(STATIC_LIB) sht610module.c
-	# $(CC) -IRel_SHT/Dev $(shell pkg-config --cflags python) \
+	# $(CC) -IRel_SHT/Dev $(shell pkg-config --cflags python) \#
 	$(CC) -IRel_SHT/Dev -I/usr/include/python2.6 \
 		-o sht610.o -c sht610module.c
 	$(CC) -shared -o sht610.so sht610.o \
